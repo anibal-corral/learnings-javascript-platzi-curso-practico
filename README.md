@@ -9,3 +9,4 @@ Curso practico de Javascript
 - Step 2: implementing formules
 - Step 3: create functions
 - Step 4: Integration with HTML
+    
