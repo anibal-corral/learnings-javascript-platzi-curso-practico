@@ -20,7 +20,7 @@ const triangleHeight=5.5;
 console.log(`Height of the Triangle measure: ${triangleHeight} cm`);
 
 function trianglePerimeter(sideA, sideB, base){
-    return sideA+sideB+base;
+    return parseInt((sideA+sideB)+base);
 }
 console.log(`Perimeter of triangle ${trianglePerimeter(triangleSideA,triangleSideB,triangleBase)}`);
 function triangleArea(base, height){
@@ -48,3 +48,29 @@ function areaCircle(radius){
 return (radius*radius)*PI;
 }
 console.log(`Area of Circle ${areaCircle(radiusCircle)}`);
+
+function calculateSquarePerimeter(){
+    // const value = document.getElementById("SquareInput").value;
+    alert(`${squarePerimeter(document.getElementById("SquareInput").value)}`)
+}
+function calculateSquareArea(){
+    alert(`${squareArea(document.getElementById("SquareInput").value)}`)
+}
+function calculateTrianglePerimeter(){
+    const sideA = document.getElementById("TriangleInputSideA").value
+    const sideB = document.getElementById("TriangleInputSideB").value
+    const base = document.getElementById("TriangleInputBase").value
+    alert(`Perimeter is ${trianglePerimeter(sideA,sideB,base)}`);
+}
+function calculateTriangleArea(){
+    const base = document.getElementById("TriangleInputBase").value
+    const height = document.getElementById("TriangleInputHeight").value
+    alert(`${triangleArea(base,height)}`)
+}
+function calculateCirclePerimeter(){
+    // const value = document.getElementById("SquareInput").value;
+    alert(`${perimeterCircle(document.getElementById("CircleInput").value)}`)
+}
+function calculateCircleArea(){
+    alert(`${areaCircle(document.getElementById("CircleInput").value)}`)
+}
