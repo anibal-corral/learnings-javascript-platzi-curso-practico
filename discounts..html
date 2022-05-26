@@ -16,8 +16,13 @@
         <form >
             <label for="InputPrice">Write the price</label>
             <input type="number" name="" id="InputPrice">
-            <label for="InputDiscount">Write the discount</label>
-            <input type="number" name="" id="InputDiscount">
+            <label for="InputDiscount">Select cupon</label>
+            <select name="cupon" id="SelectDiscount">
+                <option value="cupon10">Cupon 10</option>
+                <option value="cupon25">Cupon 25</option>
+                <option value="cupon50">Cupon 50</option>
+            </select>
+            
             <button type="button" onclick="onClickCalculatePriceWithDiscount()">Calculate price with discount</button>
             <p id="PrecioWithDiscount"></p>
         </form>
