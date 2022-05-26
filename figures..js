@@ -26,6 +26,19 @@ console.log(`Perimeter of triangle ${trianglePerimeter(triangleSideA,triangleSid
 function triangleArea(base, height){
     return (base*height)/2;
 }
+function isoscelesTriangleArea(sideA, sideB, sideC){
+    const s = (sideA+sideB+sideC)/2;
+return Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC))
+
+
+}
+function isoscelesTriangleHeight(sideA, sideB,sideC){
+    if(sideA!=sideB) return 'SideA must be equal SideB';
+    const h = Math.sqrt(sideA^2 - ((sideB^2)/4))
+return h;
+
+
+}
 
 console.log(`Area of triangl ${triangleArea(triangleBase,triangleHeight)}`);
 console.groupEnd();
@@ -73,4 +86,22 @@ function calculateCirclePerimeter(){
 }
 function calculateCircleArea(){
     alert(`${areaCircle(document.getElementById("CircleInput").value)}`)
+}
+function calculateIsoscelesTrianglePerimeter(){
+    const sideA = document.getElementById("IsoscelesTriangleInputSideA").value
+    const sideB = document.getElementById("IsoscelesTriangleInputSideB").value
+    const base = document.getElementById("IsoscelesTriangleInputBase").value
+    alert(`Perimeter is ${trianglePerimeter(sideA,sideB,base)}`);
+}
+function calculateIsoscelesTriangleArea(){
+    const sideA = document.getElementById("IsoscelesTriangleInputSideA").value
+    const sideB = document.getElementById("IsoscelesTriangleInputSideB").value
+    const sideC = document.getElementById("IsoscelesTriangleInputBase").value
+    alert(`${isoscelesTriangleArea(sideA,sideB,sideC)}`)
+}
+function calculateIsoscelesTriangleHeight(){
+    const sideA = document.getElementById("IsoscelesTriangleInputSideA").value
+    const sideB = document.getElementById("IsoscelesTriangleInputSideB").value
+    const sideC = document.getElementById("IsoscelesTriangleInputBase").value
+    alert(`${isoscelesTriangleHeight(sideA,sideB,sideC)}`)
 }
